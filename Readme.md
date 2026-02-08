@@ -20,16 +20,5 @@ https://shirxcl.github.io/cinehub-movie-website/
 - JavaScript (DOM manipulation)  
 - Swiper.js (Carousel/slider)
 
-## 📸 Screenshots
-
-### Home & Trending
-![Home Page](screenshots/screenshot-1.png)
-
-### Movies Grid
-![Movies Grid](screenshots/screenshot-2.png)
-
-## ⚠️ Disclaimer
-Movie images are used for educational/demo purposes only. All rights belong to their respective owners.
-
 ## 👤 Author
 Shiraz
