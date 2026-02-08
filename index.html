@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CineHub – Movie Discovery Platform</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="swiper-bundle.min.css"/>
+
+  <!-- Icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/fav-icon.png" type="image/png"/>
+</head>
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <div class="nav container">
+      <a href="index.html" class="logo">
+        Cine<span>Hub</span>
+      </a>
+
+      <div class="search-box">
+        <input type="search" id="search-input" placeholder="Search movies..." />
+        <i class='bx bx-search'></i>
+      </div>
+
+      <div class="navbar">
+        <a href="#home" class="nav-link nav-active">
+          <i class='bx bxs-home-smile'></i>
+          <span class="nav-link-title">Home</span>
+        </a>
+
+        <a href="#popular" class="nav-link">
+          <i class='bx bxs-hot'></i>
+          <span class="nav-link-title">Trending</span>
+        </a>
+
+        <a href="#movies" class="nav-link">
+          <i class='bx bxs-tv'></i>
+          <span class="nav-link-title">Movies</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="home container" id="home">
+    <img src="img\spiderman-banner.jpg" alt="Spider-Man Banner" class="home-img">
+
+    <div class="home-text">
+      <h1 class="home-title">Spider-Man: <br> Across the Spider-Verse</h1>
+      <p>Now streaming worldwide</p>
+      <a href="#" class="watch-btn">
+        <i class='bx bxs-right-arrow'></i>
+        <span>Watch Trailer</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- TRENDING / POPULAR -->
+  <section class="popular container" id="popular">
+    <div class="heading">
+      <h2 class="heading-title">Trending Now</h2>
+      <div class="swiper-btn">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+    <!-- IMPORTANT: class matches main.js -->
+    <div class="popular-content swiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="movie-box">
+            <img src="img/popular-movie-1.jpg" alt="Spider-Man No Way Home" class="movie-box-img">
+            <div class="box-text">
+              <h2 class="movie-title">Spider-Man: No Way Home</h2>
+              <span class="movie-type">Action</span>
+              <a href="#" class="watch-btn play-btn">
+                <i class='bx bxs-right-arrow'></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="movie-box">
+            <img src="img/movie-11.png" alt="Sonic 2" class="movie-box-img">
+            <div class="box-text">
+              <h2 class="movie-title">Sonic 2</h2>
+              <span class="movie-type">Adventure</span>
+              <a href="#" class="watch-btn play-btn">
+                <i class='bx bxs-right-arrow'></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="movie-box">
+            <img src="img/movie-22.png" alt="Morbius" class="movie-box-img">
+            <div class="box-text">
+              <h2 class="movie-title">Morbius</h2>
+              <span class="movie-type">Sci-Fi</span>
+              <a href="#" class="watch-btn play-btn">
+                <i class='bx bxs-right-arrow'></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MOVIES GRID -->
+  <section class="movies container" id="movies">
+    <div class="heading">
+      <h2 class="heading-title">Browse Movies</h2>
+    </div>
+
+    <div class="movies-content">
+
+      <div class="movie-box">
+        <img src="img/movie-1.jpg" alt="Jumanji" class="movie-box-img">
+        <div class="box-text">
+          <h2 class="movie-title">Jumanji</h2>
+          <span class="movie-type">Adventure</span>
+        </div>
+      </div>
+
+      <div class="movie-box">
+        <img src="img/movie-2.jpg" alt="Jungle Cruise" class="movie-box-img">
+        <div class="box-text">
+          <h2 class="movie-title">Jungle Cruise</h2>
+          <span class="movie-type">Adventure</span>
+        </div>
+      </div>
+
+      <div class="movie-box">
+        <img src="img/movie-3.jpg" alt="Shang-Chi" class="movie-box-img">
+        <div class="box-text">
+          <h2 class="movie-title">Shang-Chi</h2>
+          <span class="movie-type">Action</span>
+        </div>
+      </div>
+
+      <div class="movie-box">
+        <img src="img/movie-4.jpg" alt="Eternals" class="movie-box-img">
+        <div class="box-text">
+          <h2 class="movie-title">Eternals</h2>
+          <span class="movie-type">Action</span>
+        </div>
+      </div>
+
+      <div class="movie-box">
+        <img src="img/movie-55.png" alt="Batman" class="movie-box-img">
+        <div class="box-text">
+          <h2 class="movie-title">Batman</h2>
+          <span class="movie-type">Action</span>
+        </div>
+      </div>
+
+      <div class="movie-box">
+        <img src="img/movie-6.png" alt="Uncharted" class="movie-box-img">
+        <div class="box-text">
+          <h2 class="movie-title">Uncharted</h2>
+          <span class="movie-type">Adventure</span>
+        </div>
+      </div>
+
+      <div class="movie-box">
+        <img src="img/movie-7.jpg" alt="Wolverine" class="movie-box-img">
+        <div class="box-text">
+          <h2 class="movie-title">Wolverine</h2>
+          <span class="movie-type">Action</span>
+        </div>
+      </div>
+
+      <div class="movie-box">
+        <img src="img/movie-8.jpg" alt="Flash" class="movie-box-img">
+        <div class="box-text">
+          <h2 class="movie-title">Flash</h2>
+          <span class="movie-type">Action</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div class="copyright">
+    <p>© 2026 CineHub. Built by Shiraz.</p>
+  </div>
+
+  <!-- Scripts -->
+  <script src="swiper-bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

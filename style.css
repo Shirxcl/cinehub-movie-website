@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+:root {
+  --main-color: #ffb43a;
+  --hover-color: hsl(37, 94%, 57%);
+  --body-color: #1e1e2a;
+  --container-color: #2d2e37;
+  --text-color: #fcfeff;
+}
+
+body {
+  background: var(--body-color);
+  color: var(--text-color);
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a { text-decoration: none; color: inherit; }
+li { list-style: none; }
+
+.container {
+  max-width: 1060px;
+  margin: auto;
+  width: 95%;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  background: var(--body-color);
+  z-index: 100;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+}
+.logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-right: auto;
+}
+.logo span { color: var(--main-color); }
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 8px 14px;
+  background: var(--container-color);
+  border-radius: 999px;
+  margin-right: 1rem;
+}
+#search-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #b7b7b7;
+  transition: .2s ease;
+}
+.nav-link:hover, .nav-link.active {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* HERO */
+.home {
+  position: relative;
+  min-height: 460px;
+  margin-top: 5.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.home-img {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  z-index: -1;
+}
+.home::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(rgba(0,0,0,.7)), rgba(0,0,0,.2));
+}
+.home-text {
+  padding: 2rem;
+  max-width: 520px;
+}
+.home-title { font-size: 1.8rem; }
+.watch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  margin-top: 1rem;
+}
+.watch-btn .bx {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--main-color);
+  display: grid;
+  place-items: center;
+}
+
+/* HEADINGS */
+.heading {
+  display: flex;
+  justify-content: space-between;
+  background: var(--container-color);
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+/* MOVIE CARDS */
+.movie-box {
+  position: relative;
+  height: 360px;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.movie-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,.5);
+}
+.movie-box-img {
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+.movie-box:hover .movie-box-img {
+  transform: scale(1.08);
+}
+.box-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 12px;
+  background: linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,.15));
+}
+
+/* GRID */
+.movies-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+/* SWIPER */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #fff;
+  font-size: 18px;
+}
+
+/* FOOTER */
+.copyright, .site-footer {
+  text-align: center;
+  padding: 20px;
+  opacity: .8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    top: auto; bottom: 0; left: 0; right: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    background: var(--container-color);
+    padding: 8px 0;
+  }
+  .home { min-height: 380px; }
+}
+
+/* FIX HERO BANNER HEIGHT */
+.home {
+  min-height: 520px;              /* give banner real height */
+  padding: 0;                    /* remove extra padding */
+}
+
+.home-img {
+  object-fit: cover;
+  object-position: center top;   /* adjust crop focus */
+}
